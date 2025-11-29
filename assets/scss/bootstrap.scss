@@ -1,0 +1,11 @@
+/* --------------------------
+   Hugo + Bootstrap SCSS
+---------------------------*/
+
+/* 如果你有用 npm 安裝 Bootstrap */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* 如果你沒有用 npm，可以暫時測試這行 */
+body {
+  background-color: #f8f9fa;
+}

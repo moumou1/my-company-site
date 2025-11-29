@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-tw'
+title = 'KNUB 衛浴企業官網'
+[params]
+  companyName = "KNUB 衛浴"
+  phone = "(02) 8585-0000"
+  email = "service@knub.com.tw"
+  address = "台北市內湖區 ×× 路 ×× 號"

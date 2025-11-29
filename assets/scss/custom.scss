@@ -1,0 +1,31 @@
+/* --------------------------
+   自訂全站樣式
+---------------------------*/
+
+/* Navbar 自訂顏色 */
+.navbar {
+  background-color: #ffffff;
+}
+
+/* Footer 自訂顏色 */
+footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+/* Card hover 效果 */
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+}
+
+/* 其他自訂樣式可以加在這裡 */

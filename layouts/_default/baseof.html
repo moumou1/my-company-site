@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }} | {{ .Site.Params.companyName }}</title>
+
+  {{/* Bootstrap + Custom SCSS 編譯 */}}
+  {{ $bootstrap := resources.Get "scss/bootstrap.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
+
+  {{ $custom := resources.Get "scss/custom.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $custom.Permalink }}">
+
+  {{/* partial "header-meta.html" . */}} {{/* 未來若要放 SEO 設定 */}}
+</head>
+
+<body>
+
+  {{ partial "navbar.html" . }}  <!-- 導覽列 -->
+
+  <main class="container py-4">
+    {{ block "main" . }}{{ end }}  <!-- 每頁的內容會插入這裡 -->
+  </main>
+
+  {{ partial "footer.html" . }}  <!-- 頁尾 -->
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 你自己的 JS -->
+  {{ $mainjs := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $mainjs.Permalink }}"></script>
+
+</body>
+</html>
