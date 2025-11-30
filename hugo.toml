@@ -1,8 +1,8 @@
 baseURL = "https://moumou1.github.io/my-company-site/"
 languageCode = 'zh-tw'
-title = 'KNUB 衛浴企業官網'
+title = ' 豪上整體衛浴企業官網'
 [params]
-  companyName = "KNUB 衛浴"
-  phone = "(02) 8585-0000"
-  email = "service@knub.com.tw"
-  address = "台北市內湖區 ×× 路 ×× 號"
+  companyName = "HS 衛浴"
+  phone = "0933250761"
+  email = "gary0612@hotmail.com.tw"
+  address = "高雄市苓雅區凱旋二路61號"
