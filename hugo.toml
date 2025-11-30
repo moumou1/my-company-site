@@ -1,6 +1,8 @@
 baseURL = "https://moumou1.github.io/my-company-site/"
 languageCode = 'zh-tw'
 title = ' 豪上整體衛浴企業官網'
+relativeURLs = true
+canonifyURLs = true
 [params]
   companyName = "豪上衛浴"
   phone = "0933250761"
