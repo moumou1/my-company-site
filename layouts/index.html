@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Banner -->
-<div id="hero" class="py-5 text-center bg-light">
+<!-- <div id="hero" class="py-5 text-center bg-light">
   <div class="container">
     <h1 class="display-5 fw-bold">高品質衛浴設備</h1>
     <p class="lead mb-4">
@@ -9,7 +9,88 @@
     </p>
     <a href="/products/" class="btn btn-primary btn-lg">查看產品</a>
   </div>
-</div>
+</div> -->
+
+<!-- Core Advantages Section -->
+<section class="py-5 advantage-section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4 text-primary">本公司十大核心優勢</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>符合台灣建築現況</h5>
+          <p>所有管路與配件皆依照台灣住宅結構與法規標準設計，完美契合在地需求。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>相容各式衛浴配套</h5>
+          <p>產品與施工方式全面考量台灣衛浴空間特性，減少後續調整成本。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>有效防潮除霉</h5>
+          <p>施工過程不破壞原有防水層，維持室內乾爽環境，避免潮濕與霉味問題。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>維修空間完善</h5>
+          <p>明管設計、管線清楚可見，後續保養維修更快速便利。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>耐用超過十年</h5>
+          <p>精選高品質材料，確保構造穩固、長期耐用，提供品質保證。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>專業團隊全程施作</h5>
+          <p>由專業技師負責安裝與測試，並提供完善售後保修服務。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>建物結構安全無虞</h5>
+          <p>依建築載重及結構需求提供專業解決方案，降低施工風險。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>老屋衛浴升級方案</h5>
+          <p>免費提供平面與立面規劃圖，提高空間利用效率。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>精緻覆板施工</h5>
+          <p>細部加工與側板覆蓋，使外觀完整、美觀、安全。</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="advantage-card">
+          <h5>一條龍專案服務</h5>
+          <p>從規劃、設計、施工到售後，提供最符合需求的客製化衛浴空間。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Products Section -->
 <section class="py-5">
@@ -21,9 +102,9 @@
 
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1216_11-29.jpg" | relURL }}" class="card-img-top" alt="產品1">
+          <img src="{{ "images/products/1216.png" | relURL }}" class="card-img-top" alt="產品1">
           <div class="card-body">
-            <h5 class="card-title">1216-BL</h5>
+            <h5 class="card-title">1216</h5>
             <p class="card-text">堅固、安全、防水設計，搭配現代玻璃工藝。</p>
             <a href="/products/shower-door/" class="btn btn-outline-primary">了解更多</a>
           </div>
@@ -32,9 +113,9 @@
 
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1216_11-29.jpg" | relURL }}" class="card-img-top" alt="產品2">
+          <img src="{{ "images/products/1618.png" | relURL }}" class="card-img-top" alt="產品2">
           <div class="card-body">
-            <h5 class="card-title">1216-BR</h5>
+            <h5 class="card-title">1618</h5>
             <p class="card-text">多功能按摩噴頭、恆溫控制，享受尊榮沐浴體驗。</p>
             <a href="/products/shower-column/" class="btn btn-outline-primary">了解更多</a>
           </div>
@@ -43,9 +124,9 @@
 
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1618_11-29.jpg" | relURL }}" class="card-img-top" alt="產品3">
+          <img src="{{ "images/products/1620.png" | relURL }}" class="card-img-top" alt="產品3">
           <div class="card-body">
-            <h5 class="card-title">1618-BL</h5>
+            <h5 class="card-title">1620</h5>
             <p class="card-text">預防潮濕霉味，保持浴室乾爽舒適。</p>
             <a href="/products/dryer/" class="btn btn-outline-primary">了解更多</a>
           </div>

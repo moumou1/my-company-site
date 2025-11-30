@@ -19,6 +19,46 @@ footer {
   transition: transform 0.3s;
 }
 
+/* 核心優勢效果 */
+.advantage-section {
+  background: #f4f6fa; /* 淡灰底提升段落區隔 */
+}
+
+.advantage-card {
+  background: #ffffff;
+  border-left: 4px solid #0d6efd; /* 藍色識別線 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.advantage-card h5 {
+  color: #0d6efd; /* 主色藍 */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.advantage-card p {
+  color: #555; /* 深灰可讀性佳 */
+  margin: 0;
+}
+
+.advantage-box {
+  border-left: 6px solid #0A4C9C;
+  transition: all .3s ease;
+}
+.advantage-box:hover {
+  background-color: #f2f6fb;
+  transform: translateY(-4px);
+}
+
+/* carousel 輪播效果 */
 .carousel-caption h5 {
   font-size: 2rem;
   font-weight: 600;
