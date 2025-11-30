@@ -23,7 +23,10 @@ jobs:
           extended: true             # 如果你用 Hugo Extended 編譯 SCSS
 
       - name: Build Hugo site
-        run: hugo --cleanDestinationDir --minify
+        run: |
+          hugo --cleanDestinationDir --minify
+          echo "=== Check public/images/products ==="
+          ls -R public/images/products/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
