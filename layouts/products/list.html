@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 text-primary">產品介紹</h2>
+
+    <div class="row g-4">
+      {{ range .Pages }}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          {{ with .Params.image }}
+          <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+          {{ end }}
+          <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            {{ with .Params.summary }}
+            <p class="card-text">{{ . }}</p>
+            {{ end }}
+            <a href="{{ .RelPermalink }}" class="btn btn-outline-primary">了解更多</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
