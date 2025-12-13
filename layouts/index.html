@@ -1,16 +1,52 @@
 {{ define "main" }}
 
-<!-- Banner -->
-<!-- <div id="hero" class="py-5 text-center bg-light">
-  <div class="container">
-    <h1 class="display-5 fw-bold">高品質衛浴設備</h1>
-    <p class="lead mb-4">
-      提供現代化、設計感與功能兼具的衛浴產品，打造理想生活空間。
-    </p>
-    <a href="/products/" class="btn btn-primary btn-lg">查看產品</a>
-  </div>
-</div> -->
+<!-- Carousel Banner -->
+<div id="homeCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
 
+  <!-- 指示點 -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- 內容圖片 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ "images/ttt.jpg" | relURL }}" class="d-block w-100" alt="banner 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>品味衛浴空間</h5>
+        <p>以細節決定品質，打造家的美好樣貌</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{{ "images/2.jpg" | relURL }}" class="d-block w-100" alt="banner 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>現代浴室設計</h5>
+        <p>機能與美學兼具的衛浴解決方案</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{{ "images/3.jpg" | relURL }}" class="d-block w-100" alt="banner 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>全方位服務</h5>
+        <p>選購、安裝、售後一條龍服務</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 左右控制 -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<!-- Carousel End -->
+ 
 <!-- Core Advantages Section -->
 <section class="py-5 advantage-section">
   <div class="container">
@@ -159,52 +195,5 @@
     </div>
   </div>
 </section>
-
-<!-- Carousel Banner -->
-<div id="homeCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-
-  <!-- 指示點 -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
-  </div>
-
-  <!-- 內容圖片 -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{ "images/ttt.jpg" | relURL }}" class="d-block w-100" alt="banner 1">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>品味衛浴空間</h5>
-        <p>以細節決定品質，打造家的美好樣貌</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="{{ "images/2.jpg" | relURL }}" class="d-block w-100" alt="banner 2">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>現代浴室設計</h5>
-        <p>機能與美學兼具的衛浴解決方案</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="{{ "images/3.jpg" | relURL }}" class="d-block w-100" alt="banner 3">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>全方位服務</h5>
-        <p>選購、安裝、售後一條龍服務</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 左右控制 -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-<!-- Carousel End -->
 
 {{ end }}
