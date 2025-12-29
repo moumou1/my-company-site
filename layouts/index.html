@@ -6,21 +6,19 @@
   <!-- 指示點 -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+    <!-- <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button> -->
   </div>
 
   <!-- 內容圖片 -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ "images/ttt.jpg" | relURL }}" class="d-block w-100" alt="banner 1">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>品味衛浴空間</h5>
-        <p>以細節決定品質，打造家的美好樣貌</p>
-      </div>
+      <a href="{{ "news/" | relURL }}">
+        <img src="{{ "images/news.png" | relURL }}" class="d-block w-100" alt="banner 1">
+      </a>
     </div>
 
-    <div class="carousel-item">
+    <!-- <div class="carousel-item">
       <img src="{{ "images/2.jpg" | relURL }}" class="d-block w-100" alt="banner 2">
       <div class="carousel-caption d-none d-md-block">
         <h5>現代浴室設計</h5>
@@ -34,7 +32,7 @@
         <h5>全方位服務</h5>
         <p>選購、安裝、售後一條龍服務</p>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- 左右控制 -->

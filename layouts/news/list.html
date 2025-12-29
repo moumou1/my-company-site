@@ -1,0 +1,53 @@
+{{ define "main" }}
+
+<!-- News Banner -->
+<section
+  class="page-hero mb-5"
+  style="background-image: url({{ "images/newsNoLink.png" | absURL }});">
+</section>
+
+<!-- Page Title -->
+<section class="container mb-5">
+  <h1 class="fw-bold text-center text-primary mb-3">
+    {{ .Title }}
+  </h1>
+  {{ with .Params.description }}
+    <p class="text-center text-muted">{{ . }}</p>
+  {{ end }}
+</section>
+
+<!-- News List -->
+<section class="container pb-5">
+  <div class="row g-4">
+
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+
+        {{ with .Params.image }}
+        <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+        {{ end }}
+
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ .Title }}</h5>
+
+          <small class="text-muted mb-2">
+            {{ .Date.Format "2006-01-02" }}
+          </small>
+
+          <p class="card-text">
+            {{ .Summary }}
+          </p>
+
+          <a href="{{ "products/1216/" | relURL }}" class="btn btn-outline-primary mt-auto">
+            查看 1216 產品型錄
+          </a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}
