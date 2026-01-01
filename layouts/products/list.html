@@ -5,7 +5,7 @@
     <h2 class="text-center mb-4 text-primary">產品介紹</h2>
 
     <div class="row g-4">
-      {{ range .Pages }}
+      {{ range .Pages.ByWeight }}
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           {{ with .Params.image }}
