@@ -4,24 +4,52 @@
   <div class="container">
     <h2 class="text-center mb-4 text-primary">產品介紹</h2>
 
-    <div class="row g-4">
-      {{ range .Pages.ByWeight }}
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          {{ with .Params.image }}
-          <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
-          {{ end }}
-          <div class="card-body">
-            <h5 class="card-title">{{ .Title }}</h5>
-            {{ with .Params.summary }}
-            <p class="card-text">{{ . }}</p>
+    <!-- 普通產品 -->
+    <div class="row g-4 mb-5">
+      {{ range where .Pages.ByWeight "Params.hideFromList" "ne" true }}
+        {{ if ne .Params.productType "accessories" }}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            {{ with .Params.image }}
+              <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
             {{ end }}
-            <a href="{{ .RelPermalink }}" class="btn btn-outline-primary">了解更多</a>
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+              {{ with .Params.summary }}
+                <p class="card-text">{{ . }}</p>
+              {{ end }}
+              <a href="{{ .RelPermalink }}" class="btn btn-outline-primary">了解更多</a>
+            </div>
           </div>
         </div>
-      </div>
+        {{ end }}
       {{ end }}
     </div>
+
+    <!-- 配件產品 -->
+    {{ $accessories := where .Pages "Params.productType" "eq" "accessories" }}
+    {{ if gt (len $accessories) 0 }}
+      <h3 class="fw-bold text-center mb-4">衛浴配件</h3>
+      <div class="row g-4">
+        {{ range $accessories }}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            {{ with .Params.image }}
+              <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+            {{ end }}
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+              {{ with .Params.summary }}
+                <p class="card-text">{{ . }}</p>
+              {{ end }}
+              <a href="{{ .RelPermalink }}" class="btn btn-outline-primary">了解更多</a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    {{ end }}
+
   </div>
 </section>
 

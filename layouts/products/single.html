@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+{{ if ne .Params.productType "accessories" }}
 <section class="py-5 bg-light">
   <div class="container">
     <div class="row align-items-center">
@@ -30,6 +31,7 @@
     </div>
   </div>
 </section>
+{{ end }}
 
 <!-- 產品規格區 -->
 {{ if .Params.specs }}
@@ -81,6 +83,8 @@
 </section>
 {{ end }}
 
+{{ partial "products/accessories.html" . }}
+
 <!-- CTA -->
 <section class="py-5 text-center">
   <div class="container">
@@ -91,3 +95,4 @@
 </section>
 
 {{ end }}
+

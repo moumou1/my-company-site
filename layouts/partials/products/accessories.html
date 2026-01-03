@@ -1,0 +1,39 @@
+{{ if .Params.accessories }}
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-5">衛浴配件選擇</h2>
+
+    {{ range .Params.accessories }}
+    <div class="mb-5">
+
+      <!-- 分類標題 -->
+      <div class="text-center mb-4">
+        <h3 class="fw-bold text-primary">{{ .level }}</h3>
+        {{ if .desc }}
+        <p class="text-muted">{{ .desc }}</p>
+        {{ end }}
+      </div>
+
+      <!-- 圖片列表 -->
+      <div class="row g-4 justify-content-center">
+        {{ range .items }}
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="{{ .image | relURL }}"
+                 class="card-img-top"
+                 alt="{{ .text }}">
+            <div class="card-body text-center">
+              <p class="mb-0 small">{{ .text }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
