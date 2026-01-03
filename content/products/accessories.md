@@ -20,6 +20,6 @@ accessories:
   - level: "一般型"
     desc: "基本實用"
     items:
-      - image: "images/accessories/basic-1.png"
+      - image: "images/accessories/basic-1.jpg"
         text: "標準款蓮蓬頭"
 ---
