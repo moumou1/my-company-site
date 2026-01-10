@@ -1,0 +1,182 @@
+{{ define "main" }}
+
+<!-- SMC簡介 -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-primary mb-4">SMC 航空材料特色</h2>
+
+    <p>
+      SMC（Sheet Molding Compound）為高性能複合材料，
+      兼具<strong>鋼鐵等級的結構強度</strong>，
+      同時擁有鋼鐵所缺乏的<strong>柔性、輕質與溫潤觸感</strong>。
+    </p>
+
+    <p>
+      該材料具備<strong>耐老化、耐腐蝕、使用壽命長</strong>之特性，
+      並具備良好的<strong>安全絕緣性能</strong>，
+      已廣泛應用於航空、車輛與高端建築領域。
+    </p>
+
+    <p>
+      本公司將 SMC 材料完整應用於
+      <strong>整體衛浴底盤、壁板與天花板</strong>，
+      以一體成型方式打造結構穩固、長久耐用的整體衛浴系統。
+    </p>
+  </div>
+</section>
+
+<!-- 六大功能 -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5 text-primary">六大功能設計</h2>
+
+    <div class="row g-4">
+
+      {{/* 功能 1 */}}
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func1.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">一體成型防水底盤</h5>
+        <p class="small text-muted">
+          工廠預製整體成型，從結構源頭杜絕滲漏風險。
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func2.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">高強度壁板結構</h5>
+        <p class="small text-muted">
+          SMC 高強度板材，耐衝擊、不變形。
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func3.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">輕量化整體構造</h5>
+        <p class="small text-muted">
+          僅為傳統衛浴約 1/5 重量，大幅降低建築負擔。
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func3.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">乾式施工系統</h5>
+        <p class="small text-muted">
+          無切割、無泥作，安裝快速、環境乾淨。
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func5.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">明管設計維修便利</h5>
+        <p class="small text-muted">
+          建立維修空間，快速處理水垢與阻塞問題。
+        </p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <img src="{{ "images/func6.jpg" | relURL }}" class="img-fluid rounded mb-3">
+        <h5 class="fw-bold">防霉防臭排水系統</h5>
+        <p class="small text-muted">
+          三層排水結構＋獨立水封，快速排水有效防臭。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 核心優勢 -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-primary text-center">核心優勢</h2>
+
+    <div class="row g-4 smc-advantage">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">01</span>
+          <h5 class="fw-bold mt-3">快速安裝</h5>
+          <p>
+            傳統衛浴施工至少 15 個工作日，涉及多工種協作。
+            整體衛浴於工廠精密生產，無需現場切割與防水工程，
+            安裝時間大幅縮短。
+            本公司一站式負責設計與施工，流程簡化、效率提升。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">02</span>
+          <h5 class="fw-bold mt-3">永不滲漏</h5>
+          <p>
+            傳統衛浴底層防水一旦失效，易造成樓下滲水糾紛。
+            本系統採用工廠預製一體化防水底盤，
+            「煙灰缸式」結構設計，從結構面徹底杜絕滲漏。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">03</span>
+          <h5 class="fw-bold mt-3">減少噪音與污染</h5>
+          <p>
+            傳統施工需大量材料進出，產生噪音、粉塵、廢水與建築垃圾，
+            對住戶與鄰居造成困擾。
+            本系統採乾式工法，大幅降低施工噪音與環境污染。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">04</span>
+          <h5 class="fw-bold mt-3">適合台灣老舊建築</h5>
+          <p>
+            台灣屬高地震帶，老屋翻新需嚴格考量承重。
+            整體衛浴重量僅約為傳統衛浴的五分之一，
+            結構穩固且不增加老屋負擔。
+            明管接著法亦方便日後維修與檢修。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">05</span>
+          <h5 class="fw-bold mt-3">成本效益高</h5>
+          <p>
+            零組件一站式採購，無需多方比價與溝通，
+            施工效率高、整體成本可控。
+            相較傳統衛浴，使用壽命更長，CP 值更高。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="adv-card h-100">
+          <span class="adv-no">06</span>
+          <h5 class="fw-bold mt-3">乾爽潔淨設計</h5>
+          <p>
+            超大板塊連接，整體壓制型材搭配密封條設計，
+            防霉防臭。
+            圓弧倒角消除衛生死角，
+            排水系統三層設計，快速排水、有效防臭。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="text-center mt-5">
+  <h2 class="fw-bold mb-5 text-primary text-center">SMC 整體衛浴構造系統圖</h2>
+  <img
+    src="{{ "images/architecture.png" | relURL }}"
+    class="img-fluid rounded-4 shadow-sm"
+    alt="SMC 整體衛浴構造示意圖">
+</div>
+
+{{ end }}
