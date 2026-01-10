@@ -135,17 +135,14 @@
         <p>我們擁有一支專業的團隊，從規劃、設計、安裝到售後服務，提供一條龍的專案管理。無論是新屋裝潢或是老屋翻新，豪上衛浴都能為您量身打造理想的衛浴環境，讓您享受舒適、安全且美觀的沐浴體驗。</p>
         <p>選擇豪上，就是選擇安心與品質。我們承諾提供耐用十年以上的產品，並以精湛的工藝與完善的服務，成為您信賴的衛浴夥伴。</p>
       </div>
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="embed-responsive embed-responsive-16by9 ratio ratio-16x9 shadow-lg rounded">
-          <iframe 
-            class="embed-responsive-item" 
-            src="https://www.youtube.com/embed/gIzgXSgzopU"
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen></iframe>
-        </div>
-      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+      <a href="{{ "/" | relURL }}" class="d-inline-block logo-frame">
+        <img
+          src="{{ "images/logo.png" | relURL }}"
+          alt="關於豪上"
+          class="img-fluid">
+      </a>
+    </div>
     </div>
   </div>
 </section>
@@ -156,41 +153,33 @@
     <h2 class="text-center mb-4">產品介紹</h2>
 
     <div class="row g-4">
-      {{/* 未來可使用 data/products.yaml 動態生成 */}}
+      {{ range first 6 (where .Site.RegularPages.ByWeight "Section" "products") }}
+        {{ if ne .Params.productType "accessories" }}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
 
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1216.png" | absURL }}" class="card-img-top" alt="產品1">
-          <div class="card-body">
-            <h5 class="card-title">BU1216</h5>
-            <a href="{{ "products/1216/" | relURL }}" class="btn btn-outline-primary">了解更多</a>
+            {{ with .Params.image }}
+              <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+            {{ end }}
+
+            <div class="card-body">
+              <h5 class="card-title">{{ .Title }}</h5>
+
+              {{ with .Params.summary }}
+                <p class="card-text small text-muted">{{ . }}</p>
+              {{ end }}
+
+              <a href="{{ .RelPermalink }}" class="btn btn-outline-primary">
+                了解更多
+              </a>
+            </div>
+
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1618.PNG" | absURL }}" class="card-img-top" alt="產品2">
-          <div class="card-body">
-            <h5 class="card-title">BU1618</h5>
-            <p class="card-text">多功能按摩噴頭、恆溫控制，享受尊榮沐浴體驗。</p>
-            <a href="/products/shower-column/" class="btn btn-outline-primary">了解更多</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="{{ "images/1620.PNG" | absURL }}" class="card-img-top" alt="產品3">
-          <div class="card-body">
-            <h5 class="card-title">1620</h5>
-            <p class="card-text">預防潮濕霉味，保持浴室乾爽舒適。</p>
-            <a href="/products/dryer/" class="btn btn-outline-primary">了解更多</a>
-          </div>
-        </div>
-      </div>
-
+        {{ end }}
+      {{ end }}
     </div>
+
   </div>
 </section>
 

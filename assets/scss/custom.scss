@@ -79,11 +79,29 @@ footer {
   position: relative;
 }
 
+.logo-frame {
+  padding: 24px;
+  background: #ffffff;
+  border: 1.5px solid rgba(13, 71, 161, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo-frame img {
+  max-width: 320px;   /* 控制 Logo 大小 */
+}
+
 /* 行動裝置微調 */
 @media (max-width: 768px) {
   .page-hero {
     height: 60vh;
     min-height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-frame img {
+    max-width: 220px;
   }
 }
 
