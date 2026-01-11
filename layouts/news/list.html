@@ -25,7 +25,7 @@
       <div class="card h-100 shadow-sm">
 
         {{ with .Params.image }}
-        <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+        <img src="{{ "images/logo.png" | relURL }}" class="card-img-top" alt="{{ $.Title }}">
         {{ end }}
 
         <div class="card-body d-flex flex-column">
