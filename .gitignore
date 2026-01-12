@@ -1,0 +1,54 @@
+# ===============================
+# Hugo output / generated files
+# ===============================
+/public/
+!/public/.gitkeep  # 如果你希望保留空資料夾
+
+# Hugo resources and cache
+/resources/_gen/
+/.cache/
+
+# Hugo logs
+hugo.log
+
+# ===============================
+# OS generated files
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# IDEs / editors
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ===============================
+# Node / npm / frontend
+# ===============================
+node_modules/
+package-lock.json
+yarn.lock
+dist/
+
+# ===============================
+# Themes (optional: only ignore generated content if using git submodule)
+# ===============================
+# /themes/*
+
+# ===============================
+# Data / config backups (optional)
+# ===============================
+*.backup
+*.orig
+*.old
+
+# ===============================
+# Misc / temporary
+# ===============================
+*.log
+*.tmp
